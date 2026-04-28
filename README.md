@@ -11,7 +11,7 @@
   
   <br />
   
-  **[Fitur](#-fitur) • [Mulai Cepat](#-mulai-cepat) • [Dokumentasi](#-dokumentasi) • [Berkontribusi](#-berkontribusi)**
+  **[Fitur](#-fitur) • [Mulai Cepat](#-mulai-cepat) • [Dokumentasi](#-dokumentasi) • [Berkontribusi]**
 </div>
 
 ---
