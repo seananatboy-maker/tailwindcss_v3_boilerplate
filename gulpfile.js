@@ -81,12 +81,13 @@ function devScripts() {
 }
 
 function devImages() {
-  return src(`${PathUrl.paths.src.img}/**/*.{png,jpg,jpeg,svg}`)
+  return src(`${PathUrl.paths.src.img}/**/*.{png,jpg,jpeg,svg,webp,gif,ico}`, { encoding: false })
+    .on('data', (file) => console.log('📸 Image copied:', file.basename))
     .pipe(dest(PathUrl.paths.tmp.img));
 }
 
 function devFonts() {
-  return src(`${PathUrl.paths.src.fonts}/**/*.{ttf,woff,woff2,eot,svg}`)
+  return src(`${PathUrl.paths.src.fonts}/**/*.{ttf,woff,woff2,eot,svg}`, { encoding: false })
     .pipe(dest(PathUrl.paths.tmp.fonts));
 }
 
@@ -94,7 +95,7 @@ function watchFiles() {
   watch(`${PathUrl.paths.src.base}/**/*.html`, series(includeHTML, devStyles, previewReload));
   watch([PathUrl.config.tailwindjs, `${PathUrl.paths.src.sass}/**/*.scss`], series(devStyles, previewReload));
   watch(`${PathUrl.paths.src.js}/**/*.js`, series(devScripts, previewReload));
-  watch(`${PathUrl.paths.src.img}/**/*.{png,jpg,jpeg,svg}`, series(devImages, previewReload));
+  watch(`${PathUrl.paths.src.img}/**/*.{png,jpg,jpeg,svg,webp,gif,ico}`, series(devImages, previewReload));
   watch(`${PathUrl.paths.src.fonts}/**/*.{ttf,woff,woff2,eot,svg}`, series(devFonts, previewReload));
   console.log("\n\t👀 Watching for Changes..\n");
 }
@@ -157,14 +158,14 @@ function prodScripts() {
 // ✅ FIXED: Dynamic import untuk imagemin
 async function prodImages() {
   const imageminPlugin = await loadImagemin();
-  return src(`${PathUrl.paths.src.img}/**/*.{png,jpg,jpeg,svg}`)
+  return src(`${PathUrl.paths.src.img}/**/*.{png,jpg,jpeg,svg,webp,gif,ico}`, { encoding: false })
     .pipe(imageminPlugin())
     .pipe(dest(PathUrl.paths.dist.img));
 }
 
 // ✅ FIXED: Tambah .pipe(dest()) yang hilang
 function prodFonts() {
-  return src(`${PathUrl.paths.src.fonts}/**/*.{ttf,woff,woff2,eot,svg}`)
+  return src(`${PathUrl.paths.src.fonts}/**/*.{ttf,woff,woff2,eot,svg}`, { encoding: false })
     .pipe(dest(PathUrl.paths.dist.fonts));
 }
 
