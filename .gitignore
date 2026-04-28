@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+.tmp
+package-lock.json
+*.lock
+*.DS_Store

@@ -1,0 +1,48 @@
+/* ============================================
+   LOGO COMPONENT
+   ============================================ */
+
+@use '../base/variables' as *;
+
+.logo {
+  @apply w-full h-auto flex flex-col justify-center items-center p-6;
+
+  .text {
+    @apply w-full bg-none max-w-[900px];
+    background-color: $primary-color; // ✅ Dynamic color
+
+    & text {
+      color: $logo-color;
+      stroke-width: $logo-stroke-width;
+      stroke-dashoffset: -800;
+      stroke-dasharray: 800;
+      transition: all 0.3s ease-out;
+
+      &.is-active {
+        animation: logoText 4s alternate infinite forwards;
+      }
+    }
+  }
+}
+
+/* ============================================
+   KEYFRAMES: Logo Animation
+   ============================================ */
+
+@keyframes logoText {
+  50% {
+    fill: transparent;
+  }
+
+  75% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+    stroke-width: $logo-stroke-width;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: $logo-color;
+    stroke-width: 0px;
+  }
+}

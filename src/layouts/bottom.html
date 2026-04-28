@@ -1,0 +1,21 @@
+	<!-- Eksternal Vendor Js disini-->
+    <!-- <script src="..."></script> -->
+  <!-- Akhir Vendor Js -->
+
+  <!-- CDN Plugin Js -->
+  <!-- Akhir CDN Plugin Js -->
+
+  <!-- Main.Js -->
+    <script src="./assets/js/main.js"></script>
+  <!-- Akhir Main.Js -->
+
+  <!-- Tambahan Internal Js -->
+    @@if (context.scripts) {
+      @@for(var i=0;i < scripts.length;i++) {
+        <script src="`+scripts[i]+`" type="text/javascript"></script>
+      }
+    }
+  <!-- Akhir Tambahan Internal Js -->
+    
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Judul untuk website</title>
+
+		<!-- Setup Primary Color disini -->
+			<style>
+				:root { --tang-blue: #0059CF; }
+			</style>
+		<!-- Akhir Setup Primary Color -->
+
+		<!-- Eksternal Font Google atau yang lain disini -->
+		<!-- Akhir Eksternal Font -->
+		
+		<!-- Eksternal Lib disini -->
+		<!-- Akhir Eksternal Lib -->
+
+		<!-- Main css atau Style.css disini -->
+			<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+		<!-- Akhir Main css -->
+
+		<!-- Additional Styles -->
+			@@if (context.styles) {
+				@@for(var i=0;i < styles.length;i++) {
+					<link href="`+styles[i]+`" rel="stylesheet">
+				}
+			}
+		<!-- Akhir Additional Styles -->
+
+		<!-- Eksternal lib javascript disini -->
+		<!-- End Eksternal lib javascript -->
+
+	</head>
+
+	<body class="font-lato">
