@@ -179,6 +179,12 @@ function buildFinish(done) {
   done();
 }
 
+export const generate = series(
+  () => del([PathUrl.paths.tmp.base]), // optional tapi bagus
+  includeHTML,
+  parallel(devStyles, devScripts, devImages, devFonts)
+);
+
 export default series(
   devClean,
   includeHTML,
@@ -189,6 +195,7 @@ export default series(
 
 export const prod = series(
   prodClean,
+  generate,
   includeHTML,
   validateTmpStyles,  // ✅ Run validation first
   parallel(prodHTML, prodStyles, prodScripts, prodImages, prodFonts),
