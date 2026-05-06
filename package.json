@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "yarn dev",
+    "start": "npm run dev",
     "dev": "gulp",
     "build": "gulp prod",
     "prod": "gulp prod",
