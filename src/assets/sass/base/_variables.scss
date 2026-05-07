@@ -4,8 +4,18 @@
 
 // Colors
 $logo-color: #fff;
-$primary-color: var(--tang-blue, #003366);
-
+$logo-bg: #{var(--theme-light)}; // ✅ Dynamic color
 // Logo specific
 $logo-stroke-width: 3px;
 $logo-size: 100px;
+
+
+// Comming Soon
+
+$color_1: #fff;
+$color_2: rgba(255,255,255,0.82);
+$color_3: rgba(255,255,255,0.80);
+$color_4: #C9A84C;
+
+$font-family_1: 'Bebas Neue', sans-serif;
+$border-color_1: #C9A84C;

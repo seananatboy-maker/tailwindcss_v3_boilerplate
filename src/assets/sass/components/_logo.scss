@@ -9,7 +9,7 @@
 
   .text {
     @apply w-full bg-none max-w-[900px];
-    background-color: $primary-color; // ✅ Dynamic color
+    background-color: rgb($logo-bg); // ✅ Dynamic color
 
     & text {
       color: $logo-color;
