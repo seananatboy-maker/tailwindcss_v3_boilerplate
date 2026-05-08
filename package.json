@@ -7,10 +7,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "gulp",
+    "start": "gulp",
     "build": "gulp prod",
-    "prod": "gulp prod",
     "cleanup": "gulp devClean"
   },
   "devDependencies": {

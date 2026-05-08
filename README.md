@@ -72,13 +72,9 @@ cd tailwindcss-boilerplate
 npm install
 
 # 3️⃣ Jalankan server development
-npm run dev
+npm start
 
 🎉 Browser membuka di http://localhost:9010
-
-Development
-
-npm run dev
 
 🔄 Live reload dengan auto-refresh
 👀 Watch file untuk perubahan

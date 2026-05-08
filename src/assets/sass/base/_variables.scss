@@ -4,10 +4,16 @@
 
 // Colors
 $logo-color: #fff;
+$color_1: #6366f1;
 $logo-bg: #{var(--theme-light)}; // ✅ Dynamic color
 // Logo specific
 $logo-stroke-width: 3px;
 $logo-size: 100px;
+
+// fonts
+$font-family_1: 'Open Sans', sans-serif;
+$font-family_2: 'Poppins', sans-serif;
+$font-family_3: 'JetBrains Mono', monospace;
 
 
 // Comming Soon
